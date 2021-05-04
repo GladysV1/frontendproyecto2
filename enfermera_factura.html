@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <nav class="dropdown">
+      <button
+        class="btn btn-secondary btn-sm dropdown-toggle"
+        type="button"
+        id="menu"
+        data-bs-toggle="dropdown"
+        aria-expanded="false"
+      >
+        Menu
+      </button>
+      <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="menu">
+        <li>
+          <a class="dropdown-item" href="./enfermera_citas_solicitadas.html"
+            >Citas solicitadas</a
+          >
+        </li>
+        <li>
+          <a class="dropdown-item" href="./enfermera_citas_aceptadas.html"
+            >Citas aceptadas</a
+          >
+        </li>
+        <li>
+          <a class="dropdown-item" href="./enfermera_factura.html">Facturas</a>
+        </li>
+        <li>
+          <a href="./index.html" class="dropdown-item">Inicio</a>
+        </li>
+        <li>
+          <a href="./login.html" class="dropdown-item">Cambiar de Usuario</a>
+        </li>
+        <li>
+          <a href="./editar_usuario.html" class="dropdown-item"
+            >Editar Usuario</a
+          >
+        </li>
+      </ul>
+    </nav>
+    <main class="container-fluid">
+      <div class="d-flex justify-content-center">
+        <div class="card col-4">
+          <h1 class="card-header card-title text-center">
+            Enfermera - factura
+          </h1>
+          <div class="card-body">
+            <form id="factura">
+              <label for="fecha" class="form-label">Fecha</label>
+              <input
+                type="date"
+                name="fecha"
+                id="fecha"
+                class="form-control form-control-sm"
+              />
+
+              <label for="paciente" class="form-label">Paciente</label>
+              <select
+                name="paciente"
+                id="paciente"
+                class="form-select form-select-sm"
+              >
+                <option selected></option>
+              </select>
+
+              <label for="doctor" class="form-label">Doctor</label>
+              <select
+                name="doctor"
+                id="doctor"
+                class="form-select form-select-sm"
+              >
+                <option selected></option>
+              </select>
+
+              <label for="precio-consulta" class="form-label"
+                >Precio consulta</label
+              >
+              <input
+                type="number"
+                id="precio-consulta"
+                name="precio-consulta"
+                class="form-control form-control-sm"
+                required
+              />
+
+              <label for="costo-operacion" class="form-label"
+                >Costo operación</label
+              >
+              <input
+                type="number"
+                id="costo-operacion"
+                name="costo-operacion"
+                class="form-control form-control-sm"
+              />
+
+              <label for="costo-internado" class="form-label"
+                >Costo internado</label
+              >
+              <input
+                type="number"
+                id="costo-internado"
+                name="costo-internado"
+                class="form-control form-control-sm"
+              />
+
+              <label for="total" class="form-label">Total</label>
+              <input
+                type="number"
+                id="total"
+                name="total"
+                class="form-control form-control-sm"
+                required
+              />
+
+              <div class="p-3 d-grid gap-2 col-6 mx-auto">
+                <input class="btn btn-primary" type="submit" value="Generar" />
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/enfermera_factura.js"></script>
+  </body>
+</html>

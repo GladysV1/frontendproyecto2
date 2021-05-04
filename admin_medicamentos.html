@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <nav class="dropdown">
+      <button
+        class="btn btn-secondary btn-sm dropdown-toggle"
+        type="button"
+        id="menu"
+        data-bs-toggle="dropdown"
+        aria-expanded="false"
+      >
+        Menu
+      </button>
+      <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="menu">
+        <li>
+          <a class="dropdown-item" href="./admin_pacientes.html"
+            >Cargar Pacientes</a
+          >
+        </li>
+        <li>
+          <a class="dropdown-item" href="./admin_doctores.html"
+            >Cargar Doctores</a
+          >
+        </li>
+        <li>
+          <a class="dropdown-item" href="./admin_enfermeras.html"
+            >Cargar Enfermeras</a
+          >
+        </li>
+        <li>
+          <a class="dropdown-item" href="./admin_medicamentos.html"
+            >Cargar Medicamentos</a
+          >
+        </li>
+        <li>
+          <a class="dropdown-item" href="./ver_pacientes.html">Ver Pacientes</a>
+        </li>
+        <li>
+          <a class="dropdown-item" href="./ver_doctores.html">Ver Doctores</a>
+        </li>
+        <li>
+          <a class="dropdown-item" href="./ver_enfermeras.html"
+            >Ver Enfermeras</a
+          >
+        </li>
+        <li>
+          <a class="dropdown-item" href="./ver_medicamentos.html"
+            >Ver Medicamentos</a
+          >
+        </li>
+        <li>
+          <a href="./index.html" class="dropdown-item">Inicio</a>
+        </li>
+        <li>
+          <a href="./login.html" class="dropdown-item">Cambiar de Usuario</a>
+        </li>
+        <li>
+          <a href="./editar_usuario.html" class="dropdown-item"
+            >Editar Usuario</a
+          >
+        </li>
+      </ul>
+    </nav>
+    <main class="container-fluid">
+      <h1 class="text-center">Administrador - Medicamentos</h1>
+      <div class="row">
+        <div class="col-3 border">
+          <form id="cargar-csv-medicamentos">
+            <label for="csv-medicamentos" class="form-label">Cargar CSV</label>
+            <input
+              type="file"
+              name="csv-medicamentos"
+              id="csv-medicamentos"
+              class="form-control form-control-sm"
+            />
+            <div class="p-3 d-grid gap-2 col-6 mx-auto">
+              <input class="btn btn-success" type="submit" value="Cargar CSV" />
+            </div>
+          </form>
+
+          <form id="crear-medicamento">
+            <label for="nombre" class="form-label">Nombre</label>
+            <input
+              class="form-control form-control-sm"
+              type="text"
+              name="nombre"
+              id="nombre"
+              required
+            />
+
+            <label for="precio" class="form-label">Precio</label>
+            <input
+              class="form-control form-control-sm"
+              type="text"
+              name="precio"
+              id="precio"
+              required
+            />
+
+            <label for="desc" class="form-label">Descripción</label>
+            <input
+              class="form-control form-control-sm"
+              type="text"
+              name="desc"
+              id="desc"
+              required
+            />
+
+            <label for="cant" class="form-label">Cantidad</label>
+            <input
+              class="form-control form-control-sm"
+              type="number"
+              name="cant"
+              id="cant"
+              required
+            />
+
+            <div class="p-3 d-grid gap-2 col-6 mx-auto">
+              <input
+                class="btn btn-primary"
+                type="submit"
+                value="Crear Medicamento"
+              />
+            </div>
+          </form>
+        </div>
+        <div class="col-9 border">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Precio</th>
+                <th scope="col">Descripción</th>
+                <th scope="col">Cantidad</th>
+              </tr>
+            </thead>
+            <tbody id="tabla-medicamentos"></tbody>
+          </table>
+        </div>
+      </div>
+    </main>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/admin_medicamentos.js"></script>
+  </body>
+</html>
